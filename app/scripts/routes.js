@@ -907,7 +907,22 @@
             })
             .when('/entitydatatablechecks', {
                 templateUrl: 'views/organization/entitydatatablechecks/entitydatatablechecks.html'
-            })
+            }) 
+            /*edx specific changes starting point 
+                   @Author - Ram 
+            */
+          .when('/academics',{
+              templateUrl: 'views/organization/academics/academics.html'
+          })
+          .when('/createacademicyear',{
+              templateUrl: 'views/organization/academics/createacademicyear.html'
+          })
+          .when('/viewacademicyear/:id',{
+              templateUrl: 'views/organization/academics/viewacademicyear.html'
+          })
+          .when('/editacademicyear/:id',{
+              templateUrl: 'views/organization/academics/editacademicyear.html'
+          })
         ;
         $locationProvider.html5Mode(false);
     };

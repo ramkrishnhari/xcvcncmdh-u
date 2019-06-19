@@ -641,6 +641,16 @@
                         get: {method: 'GET', params: {}},
                         save: {method: 'POST', params: {}},
                         delete: {method: 'DELETE', params: {}}
+                    }),
+
+                    // edx changes starting point @Author - Ram
+                    academicsResource : defineResource(apiVer + "/academics",{},{
+                        getAllAcademics : {method : 'GET', params: {}, isArray: true}
+                    }),
+                    
+                    academicsValueResource: defineResource(apiVer + "/academics/:academicYearId", {academicYearId: '@academicYearId'}, {
+                        getAcademicvalues: {method: 'GET', params: {}},
+                        update: { method: 'PUT', params: {}}
                     })
                 };
             }];
